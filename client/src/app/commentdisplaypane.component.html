@@ -1,0 +1,18 @@
+<div class="container">
+	<input #filterInput [(ngModel)]="filterValue" class="row-box" placeholder="Filter..">
+</div>
+<div class="container stacked-container">
+	<div *ngFor="let comment of comments" class="row-box">
+		<div *ngIf="dontFilterComment(comment)" class="container">
+			<div class="comment-image-box">
+				<img src="https://www.gravatar.com/avatar/{{comment.gravatar_hash}}" />
+			</div>
+			<div class="comment-details-box">
+				<div class="container stacked-container">
+					<div class="row-box comment-detail comment-email">{{ comment.email }}</div>
+					<div class="row-box comment-detail">{{ comment.text }}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

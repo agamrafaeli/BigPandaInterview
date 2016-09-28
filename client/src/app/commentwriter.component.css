@@ -1,0 +1,11 @@
+.input-button {
+	flex-grow: 1;
+	margin-left: 85%;
+
+	height: 30px;
+	color: white;
+
+	background-color:#33bdef;
+	border-radius:6px;
+	border:0px solid;
+}

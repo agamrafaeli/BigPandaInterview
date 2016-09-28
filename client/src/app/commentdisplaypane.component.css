@@ -1,0 +1,24 @@
+.stacked-container {
+	flex-direction: column;
+}
+
+.comment-image-box {
+	flex: flex-shrink;
+}
+
+.comment-image-box>img {
+	width: 100%;
+}
+
+.comment-details-box {
+	flex-grow: 1;
+}
+
+.comment-detail {
+	max-width: 50%;
+}
+
+.comment-email {
+	font-weight: bold;
+}
+
