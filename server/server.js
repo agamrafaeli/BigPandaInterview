@@ -21,6 +21,16 @@ extended: false
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'client')));
 
+// Allow cors
+app.all('*', function(req, res, next) {
+       res.header("Access-Control-Allow-Origin", "*");
+       res.header("Access-Control-Allow-Headers", "X-Requested-With");
+       res.header('Access-Control-Allow-Headers', 'Content-Type');
+       next();
+});
+app.use(cors());
+app.options('*', cors());
+
 // Paths setup
 app.use('/', index);
 app.use('/api/', commentsApi);
@@ -33,16 +43,7 @@ app.use(function(req, res, next) {
 	next(err);
 });
 
-app.all('*', function(req, res, next) {
-       res.header("Access-Control-Allow-Origin", "*");
-       res.header("Access-Control-Allow-Headers", "X-Requested-With");
-       res.header('Access-Control-Allow-Headers', 'Content-Type');
-       next();
-});
 
-// Allow cors
-app.use(cors());
-app.options('*', cors());
 
 
 var server = app.listen(4000, function() {
