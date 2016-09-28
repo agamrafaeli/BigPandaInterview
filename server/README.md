@@ -1,8 +1,11 @@
 ##BigPanda Interview - App Server
 ### Run the server
 To run the server that service the api run the following commands from inside this folder:
-> npm install
-> node server.js
+
+```
+npm install
+node server.js
+```
 
 The server is now available for requests at
 > http://localhost:4000

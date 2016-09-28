@@ -3,8 +3,10 @@ BigPanda Interview - App Client
 
 ### Run a local server that serves the client
 To run a local server that serves up the client run the following commands from inside this folder:
-> npm install
-> gulp
+```
+npm install
+gulp
+```
 
 Then browse to the address:
 > http://localhost:3000
