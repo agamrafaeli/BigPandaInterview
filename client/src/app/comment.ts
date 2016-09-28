@@ -6,4 +6,9 @@ export class Comment {
 		this.text = text
 		this.email = email
 	}
+
+	clearFields(): void {
+		this.text = ''
+		this.email = ''
+	}
 }

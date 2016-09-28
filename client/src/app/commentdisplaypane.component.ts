@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from 'rxjs/Rx';
+import { Observable } from 'rxjs/Rx';
 
 import { Comment } from './comment';
 import { CommentService } from './comment.service'
-
-
 
 @Component({
 	selector: 'comment-display-pane',
@@ -25,8 +23,9 @@ export class CommentDisplayPaneComponent implements OnInit{
 		timer.subscribe(time => this.updateDisplayedComments(""));
 	}
 
+	// The reason this function needs a bogusVariable is so that it can be called
+	//		from within a timer and still be called in this object's scope
 	updateDisplayedComments(bogusVariable: string): void {
-		console.log("Updating")
 		this.commentService.getComments()
 				.then(comments => this.comments = comments);
 	}

@@ -10,16 +10,8 @@ import { CommentDisplayPaneComponent } from './commentdisplaypane.component';
 import { CommentService } from './comment.service'
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  declarations: [ 
-  	CommentFeedComponent, 
-  	CommentWriterComponent, 
-  	CommentDisplayPaneComponent,
-  ],
+  imports: [ BrowserModule, FormsModule, HttpModule ],
+  declarations: [ CommentFeedComponent, CommentWriterComponent, CommentDisplayPaneComponent ],
   bootstrap: [ CommentFeedComponent ],
   providers: [ CommentService ]
 })

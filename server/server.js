@@ -5,7 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('cors');
-var index = require('./routes/index');
 var commentsApi = require('./routes/api');
 var app = express();
 
@@ -32,7 +31,6 @@ app.use(cors());
 app.options('*', cors());
 
 // Paths setup
-app.use('/', index);
 app.use('/api/', commentsApi);
 
 

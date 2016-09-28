@@ -1,0 +1,2 @@
+##BigPanda Interview - App Server
+This repository contains Agam Rafaeli's solution to the interview request by Big Panda. The `client` and `server` folders respectively each hold an entire solution (including a `README`).
